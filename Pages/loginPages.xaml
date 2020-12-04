@@ -1,0 +1,26 @@
+﻿<Page x:Class="CourseWorkAPP.Pages.loginPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWorkAPP.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="loginPages">
+
+    <StackPanel>
+        <Label Content="Авторизуйтесь в системе для работы!" FontWeight="Bold" Foreground="Red" HorizontalContentAlignment="Center"/>
+        <Separator/>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Label Content="Логин:" Width="90"/>
+            <TextBox x:Name="loginText" Width="500" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <Label Content="Пароль:" Width="90"/>
+            <PasswordBox x:Name="passwordText" Width="500" HorizontalAlignment="Right"/>
+        </StackPanel>
+        <Separator/>
+        <Button Content="Войти" Click="LoginClick"/>
+    </StackPanel>
+</Page>

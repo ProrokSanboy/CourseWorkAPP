@@ -1,0 +1,36 @@
+﻿<Window x:Class="CourseWorkAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWorkAPP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="6" BorderBrush="Gray" Background="LightGray" BorderThickness="2">
+            <StackPanel Grid.Column="0" >
+                <StackPanel x:Name="menu">
+                    <Button Content="Главная" Click="mainPageOpen"/>
+                    <Button Content="Помещения" Click="premisesPageOpen"/>
+                </StackPanel>
+
+                <StackPanel x:Name="menuAdmin">
+                    <Button Content="Главная" Click="mainPageOpen"/>
+                    <Button Content="Пользователи" Click="Button_Click"/>
+                    <Button Content="История" Click="Button_Click_1"/>
+                </StackPanel>
+
+                <StackPanel x:Name="menuManager">
+                    <Button Content="Главная" Click="mainPageOpen"/>
+                    <Button Content="Отчёты" Click="Button_Click_2"/>
+                </StackPanel>
+            </StackPanel>
+
+        </Border>
+        <Frame Grid.Column="1" x:Name="content" NavigationUIVisibility="Hidden" Source="/CourseWorkAPP;component/Pages/loginPages.xaml"/>
+    </Grid>
+</Window>

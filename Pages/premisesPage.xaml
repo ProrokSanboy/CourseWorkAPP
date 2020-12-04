@@ -1,0 +1,48 @@
+﻿<Page x:Class="CourseWorkAPP.Pages.premisesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWorkAPP.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PremisesPage">
+
+    <ScrollViewer>
+        <StackPanel x:Name="content">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Поиск помещения:"/>
+                <TextBox x:Name="filterText" Width="200" TextChanged="filterText_TextChanged"/>
+            </StackPanel>
+            <DataGrid x:Name="premisesList" AutoGenerateColumns="False" CanUserAddRows="False" SelectionMode="Single" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "Название" Binding="{Binding name}"/>
+                    <DataGridTextColumn Header = "Описание" Binding="{Binding description}"/>
+                    <DataGridTemplateColumn Header="Редактировать">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Ред." Click="Edit_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Удалить">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Уд." Click="Delete_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Контрольные точки">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Открыть" Click="ControlPoint_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Separator/>
+            <Button Content="Добавить" Click="addPremises" Margin="5,5,5,5"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

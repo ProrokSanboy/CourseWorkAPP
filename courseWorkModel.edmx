@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище courseworkdbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CleanValue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="frequency1" Type="real" Nullable="false" />
+          <Property Name="frequency2" Type="real" Nullable="false" />
+          <Property Name="frequency3" Type="real" Nullable="false" />
+          <Property Name="frequency4" Type="real" Nullable="false" />
+          <Property Name="frequency5" Type="real" Nullable="false" />
+          <Property Name="frequency6" Type="real" Nullable="false" />
+          <Property Name="frequency7" Type="real" Nullable="false" />
+          <Property Name="frequency8" Type="real" Nullable="false" />
+          <Property Name="frequency9" Type="real" Nullable="false" />
+          <Property Name="frequency10" Type="real" Nullable="false" />
+          <Property Name="frequency11" Type="real" Nullable="false" />
+          <Property Name="frequency12" Type="real" Nullable="false" />
+          <Property Name="frequency13" Type="real" Nullable="false" />
+          <Property Name="frequency14" Type="real" Nullable="false" />
+          <Property Name="frequency15" Type="real" Nullable="false" />
+          <Property Name="frequency16" Type="real" Nullable="false" />
+          <Property Name="frequency17" Type="real" Nullable="false" />
+          <Property Name="frequency18" Type="real" Nullable="false" />
+          <Property Name="frequency19" Type="real" Nullable="false" />
+          <Property Name="frequency20" Type="real" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="login" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="role_id" Type="int" Nullable="false" />
+          <Property Name="profile_id" Type="int" />
+        </EntityType>
+        <EntityType Name="ControlPoints">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="point_id" Type="int" />
+          <Property Name="premises_id" Type="int" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="100" />
+          <Property Name="level_description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="client_id" Type="int" Nullable="false" />
+          <Property Name="changes_date" Type="date" Nullable="false" />
+          <Property Name="control_points_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NoiseValue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="frequency1" Type="real" Nullable="false" />
+          <Property Name="frequency2" Type="real" Nullable="false" />
+          <Property Name="frequency3" Type="real" Nullable="false" />
+          <Property Name="frequency4" Type="real" Nullable="false" />
+          <Property Name="frequency5" Type="real" Nullable="false" />
+          <Property Name="frequency6" Type="real" Nullable="false" />
+          <Property Name="frequency7" Type="real" Nullable="false" />
+          <Property Name="frequency8" Type="real" Nullable="false" />
+          <Property Name="frequency9" Type="real" Nullable="false" />
+          <Property Name="frequency10" Type="real" Nullable="false" />
+          <Property Name="frequency11" Type="real" Nullable="false" />
+          <Property Name="frequency12" Type="real" Nullable="false" />
+          <Property Name="frequency13" Type="real" Nullable="false" />
+          <Property Name="frequency14" Type="real" Nullable="false" />
+          <Property Name="frequency15" Type="real" Nullable="false" />
+          <Property Name="frequency16" Type="real" Nullable="false" />
+          <Property Name="frequency17" Type="real" Nullable="false" />
+          <Property Name="frequency18" Type="real" Nullable="false" />
+          <Property Name="frequency19" Type="real" Nullable="false" />
+          <Property Name="frequency20" Type="real" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Point">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="clean_value" Type="int" Nullable="false" />
+          <Property Name="noise_value" Type="int" Nullable="false" />
+          <Property Name="w_value" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Premises">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="birthdate" Type="date" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="11" />
+          <Property Name="male" Type="bit" />
+          <Property Name="passport" Type="varchar" MaxLength="10" />
+          <Property Name="active" Type="bit" />
+          <Property Name="avatar" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rolename" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Clients_Profile">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="profile_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clients_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ControlPoints_Point">
+          <End Role="Point" Type="Self.Point" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ControlPoints" Type="Self.ControlPoints" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Point">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ControlPoints">
+              <PropertyRef Name="point_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ControlPoints_Premises">
+          <End Role="Premises" Type="Self.Premises" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ControlPoints" Type="Self.ControlPoints" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Premises">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ControlPoints">
+              <PropertyRef Name="premises_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_History_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="History" Type="Self.History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="client_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_History_ControlPoints">
+          <End Role="ControlPoints" Type="Self.ControlPoints" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="History" Type="Self.History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ControlPoints">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="control_points_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Point_CleanValue">
+          <End Role="CleanValue" Type="Self.CleanValue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Point" Type="Self.Point" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CleanValue">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Point">
+              <PropertyRef Name="clean_value" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Point_NoiseValue">
+          <End Role="NoiseValue" Type="Self.NoiseValue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Point" Type="Self.Point" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoiseValue">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Point">
+              <PropertyRef Name="noise_value" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище courseworkdbModelContainer">
+          <EntitySet Name="CleanValue" EntityType="Self.CleanValue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ControlPoints" EntityType="Self.ControlPoints" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="History" EntityType="Self.History" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NoiseValue" EntityType="Self.NoiseValue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Point" EntityType="Self.Point" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Premises" EntityType="Self.Premises" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profile" EntityType="Self.Profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Clients_Profile" Association="Self.FK_Clients_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clients_Role" Association="Self.FK_Clients_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ControlPoints_Point" Association="Self.FK_ControlPoints_Point">
+            <End Role="Point" EntitySet="Point" />
+            <End Role="ControlPoints" EntitySet="ControlPoints" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ControlPoints_Premises" Association="Self.FK_ControlPoints_Premises">
+            <End Role="Premises" EntitySet="Premises" />
+            <End Role="ControlPoints" EntitySet="ControlPoints" />
+          </AssociationSet>
+          <AssociationSet Name="FK_History_Clients" Association="Self.FK_History_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+          <AssociationSet Name="FK_History_ControlPoints" Association="Self.FK_History_ControlPoints">
+            <End Role="ControlPoints" EntitySet="ControlPoints" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Point_CleanValue" Association="Self.FK_Point_CleanValue">
+            <End Role="CleanValue" EntitySet="CleanValue" />
+            <End Role="Point" EntitySet="Point" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Point_NoiseValue" Association="Self.FK_Point_NoiseValue">
+            <End Role="NoiseValue" EntitySet="NoiseValue" />
+            <End Role="Point" EntitySet="Point" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="courseworkdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="login" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="role_id" Type="Int32" Nullable="false" />
+          <Property Name="profile_id" Type="Int32" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_Clients_Profile" FromRole="Clients" ToRole="Profile" />
+          <NavigationProperty Name="History" Relationship="Self.FK_History_Clients" FromRole="Clients" ToRole="History" />
+          <NavigationProperty Name="Role1" Relationship="courseworkdbModel.FK_Clients_Role1" FromRole="Clients" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="client_id" Type="Int32" Nullable="false" />
+          <Property Name="changes_date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_History_Clients" FromRole="History" ToRole="Clients" />
+          <Property Name="control_points_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ControlPoints" Relationship="courseworkdbModel.FK_History_ControlPoints" FromRole="History" ToRole="ControlPoints" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="birthdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="male" Type="Boolean" />
+          <Property Name="passport" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="avatar" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Profile" FromRole="Profile" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rolename" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Clients1" Relationship="courseworkdbModel.FK_Clients_Role1" FromRole="Role" ToRole="Clients" />
+        </EntityType>
+        <Association Name="FK_Clients_Profile">
+          <End Role="Profile" Type="Self.Profile" Multiplicity="0..1" />
+          <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profile">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="profile_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_History_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+          <End Role="History" Type="Self.History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="client_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="courseworkdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Self.Clients" />
+          <EntitySet Name="History" EntityType="Self.History" />
+          <EntitySet Name="Profile" EntityType="Self.Profile" />
+          <EntitySet Name="Role" EntityType="Self.Role" />
+          <AssociationSet Name="FK_Clients_Profile" Association="Self.FK_Clients_Profile">
+            <End Role="Profile" EntitySet="Profile" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_History_Clients" Association="Self.FK_History_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+          <EntitySet Name="Premises" EntityType="courseworkdbModel.Premises" />
+          <AssociationSet Name="FK_Clients_Role1" Association="courseworkdbModel.FK_Clients_Role1">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Clients" EntitySet="Clients" />
+          </AssociationSet>
+          <EntitySet Name="CleanValue" EntityType="courseworkdbModel.CleanValue" />
+          <EntitySet Name="ControlPoints" EntityType="courseworkdbModel.ControlPoints" />
+          <EntitySet Name="NoiseValue" EntityType="courseworkdbModel.NoiseValue" />
+          <EntitySet Name="Point" EntityType="courseworkdbModel.Point" />
+          <AssociationSet Name="FK_Point_CleanValue" Association="courseworkdbModel.FK_Point_CleanValue">
+            <End Role="CleanValue" EntitySet="CleanValue" />
+            <End Role="Point" EntitySet="Point" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ControlPoints_Point" Association="courseworkdbModel.FK_ControlPoints_Point">
+            <End Role="Point" EntitySet="Point" />
+            <End Role="ControlPoints" EntitySet="ControlPoints" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ControlPoints_Premises" Association="courseworkdbModel.FK_ControlPoints_Premises">
+            <End Role="Premises" EntitySet="Premises" />
+            <End Role="ControlPoints" EntitySet="ControlPoints" />
+          </AssociationSet>
+          <AssociationSet Name="FK_History_ControlPoints" Association="courseworkdbModel.FK_History_ControlPoints">
+            <End Role="ControlPoints" EntitySet="ControlPoints" />
+            <End Role="History" EntitySet="History" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Point_NoiseValue" Association="courseworkdbModel.FK_Point_NoiseValue">
+            <End Role="NoiseValue" EntitySet="NoiseValue" />
+            <End Role="Point" EntitySet="Point" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Premises">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ControlPoints" Relationship="courseworkdbModel.FK_ControlPoints_Premises" FromRole="Premises" ToRole="ControlPoints" />
+        </EntityType>
+        <Association Name="FK_Clients_Role1">
+          <End Type="courseworkdbModel.Role" Role="Role" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="courseworkdbModel.Clients" Role="Clients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Clients">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CleanValue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="frequency1" Type="Single" Nullable="false" />
+          <Property Name="frequency2" Type="Single" Nullable="false" />
+          <Property Name="frequency3" Type="Single" Nullable="false" />
+          <Property Name="frequency4" Type="Single" Nullable="false" />
+          <Property Name="frequency5" Type="Single" Nullable="false" />
+          <Property Name="frequency6" Type="Single" Nullable="false" />
+          <Property Name="frequency7" Type="Single" Nullable="false" />
+          <Property Name="frequency8" Type="Single" Nullable="false" />
+          <Property Name="frequency9" Type="Single" Nullable="false" />
+          <Property Name="frequency10" Type="Single" Nullable="false" />
+          <Property Name="frequency11" Type="Single" Nullable="false" />
+          <Property Name="frequency12" Type="Single" Nullable="false" />
+          <Property Name="frequency13" Type="Single" Nullable="false" />
+          <Property Name="frequency14" Type="Single" Nullable="false" />
+          <Property Name="frequency15" Type="Single" Nullable="false" />
+          <Property Name="frequency16" Type="Single" Nullable="false" />
+          <Property Name="frequency17" Type="Single" Nullable="false" />
+          <Property Name="frequency18" Type="Single" Nullable="false" />
+          <Property Name="frequency19" Type="Single" Nullable="false" />
+          <Property Name="frequency20" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Point" Relationship="courseworkdbModel.FK_Point_CleanValue" FromRole="CleanValue" ToRole="Point" />
+        </EntityType>
+        <EntityType Name="ControlPoints">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="point_id" Type="Int32" />
+          <Property Name="premises_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Point" Relationship="courseworkdbModel.FK_ControlPoints_Point" FromRole="ControlPoints" ToRole="Point" />
+          <NavigationProperty Name="Premises" Relationship="courseworkdbModel.FK_ControlPoints_Premises" FromRole="ControlPoints" ToRole="Premises" />
+          <NavigationProperty Name="History" Relationship="courseworkdbModel.FK_History_ControlPoints" FromRole="ControlPoints" ToRole="History" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="level_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NoiseValue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="frequency1" Type="Single" Nullable="false" />
+          <Property Name="frequency2" Type="Single" Nullable="false" />
+          <Property Name="frequency3" Type="Single" Nullable="false" />
+          <Property Name="frequency4" Type="Single" Nullable="false" />
+          <Property Name="frequency5" Type="Single" Nullable="false" />
+          <Property Name="frequency6" Type="Single" Nullable="false" />
+          <Property Name="frequency7" Type="Single" Nullable="false" />
+          <Property Name="frequency8" Type="Single" Nullable="false" />
+          <Property Name="frequency9" Type="Single" Nullable="false" />
+          <Property Name="frequency10" Type="Single" Nullable="false" />
+          <Property Name="frequency11" Type="Single" Nullable="false" />
+          <Property Name="frequency12" Type="Single" Nullable="false" />
+          <Property Name="frequency13" Type="Single" Nullable="false" />
+          <Property Name="frequency14" Type="Single" Nullable="false" />
+          <Property Name="frequency15" Type="Single" Nullable="false" />
+          <Property Name="frequency16" Type="Single" Nullable="false" />
+          <Property Name="frequency17" Type="Single" Nullable="false" />
+          <Property Name="frequency18" Type="Single" Nullable="false" />
+          <Property Name="frequency19" Type="Single" Nullable="false" />
+          <Property Name="frequency20" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Point" Relationship="courseworkdbModel.FK_Point_NoiseValue" FromRole="NoiseValue" ToRole="Point" />
+        </EntityType>
+        <EntityType Name="Point">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="clean_value" Type="Int32" Nullable="false" />
+          <Property Name="noise_value" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CleanValue" Relationship="courseworkdbModel.FK_Point_CleanValue" FromRole="Point" ToRole="CleanValue" />
+          <NavigationProperty Name="ControlPoints" Relationship="courseworkdbModel.FK_ControlPoints_Point" FromRole="Point" ToRole="ControlPoints" />
+          <NavigationProperty Name="NoiseValue" Relationship="courseworkdbModel.FK_Point_NoiseValue" FromRole="Point" ToRole="NoiseValue" />
+          <Property Name="w_value" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Point_CleanValue">
+          <End Type="courseworkdbModel.CleanValue" Role="CleanValue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="courseworkdbModel.Point" Role="Point" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CleanValue">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Point">
+              <PropertyRef Name="clean_value" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ControlPoints_Point">
+          <End Type="courseworkdbModel.Point" Role="Point" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="courseworkdbModel.ControlPoints" Role="ControlPoints" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Point">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ControlPoints">
+              <PropertyRef Name="point_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ControlPoints_Premises">
+          <End Type="courseworkdbModel.Premises" Role="Premises" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="courseworkdbModel.ControlPoints" Role="ControlPoints" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Premises">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ControlPoints">
+              <PropertyRef Name="premises_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_History_ControlPoints">
+          <End Type="courseworkdbModel.ControlPoints" Role="ControlPoints" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="courseworkdbModel.History" Role="History" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ControlPoints">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="History">
+              <PropertyRef Name="control_points_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Point_NoiseValue">
+          <End Type="courseworkdbModel.NoiseValue" Role="NoiseValue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="courseworkdbModel.Point" Role="Point" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoiseValue">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Point">
+              <PropertyRef Name="noise_value" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище courseworkdbModelContainer" CdmEntityContainer="courseworkdbEntities">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="courseworkdbModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+                <ScalarProperty Name="profile_id" ColumnName="profile_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="History">
+            <EntityTypeMapping TypeName="courseworkdbModel.History">
+              <MappingFragment StoreEntitySet="History">
+                <ScalarProperty Name="control_points_id" ColumnName="control_points_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="client_id" ColumnName="client_id" />
+                <ScalarProperty Name="changes_date" ColumnName="changes_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profile">
+            <EntityTypeMapping TypeName="courseworkdbModel.Profile">
+              <MappingFragment StoreEntitySet="Profile">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="male" ColumnName="male" />
+                <ScalarProperty Name="passport" ColumnName="passport" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="avatar" ColumnName="avatar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role">
+            <EntityTypeMapping TypeName="courseworkdbModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rolename" ColumnName="rolename" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Premises">
+            <EntityTypeMapping TypeName="courseworkdbModel.Premises">
+              <MappingFragment StoreEntitySet="Premises">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CleanValue">
+            <EntityTypeMapping TypeName="courseworkdbModel.CleanValue">
+              <MappingFragment StoreEntitySet="CleanValue">
+                <ScalarProperty Name="frequency20" ColumnName="frequency20" />
+                <ScalarProperty Name="frequency19" ColumnName="frequency19" />
+                <ScalarProperty Name="frequency18" ColumnName="frequency18" />
+                <ScalarProperty Name="frequency17" ColumnName="frequency17" />
+                <ScalarProperty Name="frequency16" ColumnName="frequency16" />
+                <ScalarProperty Name="frequency15" ColumnName="frequency15" />
+                <ScalarProperty Name="frequency14" ColumnName="frequency14" />
+                <ScalarProperty Name="frequency13" ColumnName="frequency13" />
+                <ScalarProperty Name="frequency12" ColumnName="frequency12" />
+                <ScalarProperty Name="frequency11" ColumnName="frequency11" />
+                <ScalarProperty Name="frequency10" ColumnName="frequency10" />
+                <ScalarProperty Name="frequency9" ColumnName="frequency9" />
+                <ScalarProperty Name="frequency8" ColumnName="frequency8" />
+                <ScalarProperty Name="frequency7" ColumnName="frequency7" />
+                <ScalarProperty Name="frequency6" ColumnName="frequency6" />
+                <ScalarProperty Name="frequency5" ColumnName="frequency5" />
+                <ScalarProperty Name="frequency4" ColumnName="frequency4" />
+                <ScalarProperty Name="frequency3" ColumnName="frequency3" />
+                <ScalarProperty Name="frequency2" ColumnName="frequency2" />
+                <ScalarProperty Name="frequency1" ColumnName="frequency1" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ControlPoints">
+            <EntityTypeMapping TypeName="courseworkdbModel.ControlPoints">
+              <MappingFragment StoreEntitySet="ControlPoints">
+                <ScalarProperty Name="level_description" ColumnName="level_description" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="premises_id" ColumnName="premises_id" />
+                <ScalarProperty Name="point_id" ColumnName="point_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoiseValue">
+            <EntityTypeMapping TypeName="courseworkdbModel.NoiseValue">
+              <MappingFragment StoreEntitySet="NoiseValue">
+                <ScalarProperty Name="frequency20" ColumnName="frequency20" />
+                <ScalarProperty Name="frequency19" ColumnName="frequency19" />
+                <ScalarProperty Name="frequency18" ColumnName="frequency18" />
+                <ScalarProperty Name="frequency17" ColumnName="frequency17" />
+                <ScalarProperty Name="frequency16" ColumnName="frequency16" />
+                <ScalarProperty Name="frequency15" ColumnName="frequency15" />
+                <ScalarProperty Name="frequency14" ColumnName="frequency14" />
+                <ScalarProperty Name="frequency13" ColumnName="frequency13" />
+                <ScalarProperty Name="frequency12" ColumnName="frequency12" />
+                <ScalarProperty Name="frequency11" ColumnName="frequency11" />
+                <ScalarProperty Name="frequency10" ColumnName="frequency10" />
+                <ScalarProperty Name="frequency9" ColumnName="frequency9" />
+                <ScalarProperty Name="frequency8" ColumnName="frequency8" />
+                <ScalarProperty Name="frequency7" ColumnName="frequency7" />
+                <ScalarProperty Name="frequency6" ColumnName="frequency6" />
+                <ScalarProperty Name="frequency5" ColumnName="frequency5" />
+                <ScalarProperty Name="frequency4" ColumnName="frequency4" />
+                <ScalarProperty Name="frequency3" ColumnName="frequency3" />
+                <ScalarProperty Name="frequency2" ColumnName="frequency2" />
+                <ScalarProperty Name="frequency1" ColumnName="frequency1" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Point">
+            <EntityTypeMapping TypeName="courseworkdbModel.Point">
+              <MappingFragment StoreEntitySet="Point">
+                <ScalarProperty Name="w_value" ColumnName="w_value" />
+                <ScalarProperty Name="noise_value" ColumnName="noise_value" />
+                <ScalarProperty Name="clean_value" ColumnName="clean_value" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

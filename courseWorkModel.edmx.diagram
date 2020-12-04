@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f87700e68c1341709f737cbb5ec5e72e" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="courseworkdbModel.Clients" Width="1.5" PointX="2.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseworkdbModel.History" PointX="5" PointY="1.875" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseworkdbModel.Profile" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseworkdbModel.Role" Width="1.5" PointX="0.5" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="courseworkdbModel.FK_Clients_Profile" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="courseworkdbModel.FK_History_Clients" />
+        <EntityTypeShape EntityType="courseworkdbModel.Premises" Width="1.5" PointX="7.375" PointY="0.75" />
+        <AssociationConnector Association="courseworkdbModel.FK_Clients_Role1" />
+        <EntityTypeShape EntityType="courseworkdbModel.CleanValue" Width="1.5" PointX="5.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseworkdbModel.ControlPoints" Width="1.5" PointX="9.625" PointY="2.625" />
+        <EntityTypeShape EntityType="courseworkdbModel.NoiseValue" Width="1.5" PointX="7.625" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="courseworkdbModel.Point" Width="1.5" PointX="9.625" PointY="5.625" />
+        <AssociationConnector Association="courseworkdbModel.FK_Point_CleanValue" />
+        <AssociationConnector Association="courseworkdbModel.FK_ControlPoints_Point" />
+        <AssociationConnector Association="courseworkdbModel.FK_ControlPoints_Premises" />
+        <AssociationConnector Association="courseworkdbModel.FK_History_ControlPoints" />
+        <AssociationConnector Association="courseworkdbModel.FK_Point_NoiseValue" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,278 @@
+﻿<Page x:Class="CourseWorkAPP.Pages.currentPointEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWorkAPP.Pages"
+      xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+      mc:Ignorable="d" 
+      Title="currentPointEdit">
+
+    <Border BorderBrush="Black" BorderThickness="1" Width="1000">
+        <Grid Loaded="Grid_Loaded" Margin="0,0,0,200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="80*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1">
+                    <TextBlock Text="По частотным полосам, дБ" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2">
+                    <TextBlock Text="На каждой полосе" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3">
+                    <TextBlock Text="Границы частотн. полос, Гц" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4">
+                    <TextBlock Text="Форматный параметр ∆Ai (fсрi) на ср. геом. частоте" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="5">
+                    <TextBlock Text="весовой коэф. полосы ki" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0">
+                    <TextBlock Text="№" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" >
+                    <TextBlock Text="Уровень речевого сигнала" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" >
+                    <TextBlock Text="Уровень шума" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3">
+                    <TextBlock Text="Отношение сигнал/шум, Дб" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4">
+                    <TextBlock Text="Нижняя"  HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Grid.Column="5">
+                    <TextBlock Text="Верхняя" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" FontSize="20"/>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="2" Name="mainTable">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="0" Content="1"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="1" Content="2"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="2" Content="3"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="3" Content="4"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="4" Content="5"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="5" Content="6"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="6" Content="7"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="7" Content="8"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="8" Content="9"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="9" Content="10"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="10" Content="11"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="11" Content="12"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="12" Content="13"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="13" Content="14"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="14" Content="15"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="15" Content="16"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="16" Content="17"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="17" Content="18"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="18" Content="19"/>
+                <Label HorizontalAlignment="Left" FontSize="20"  Grid.Column="0" Grid.Row="19" Content="20"/>
+
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="0" x:Name="cleanSignal1" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="1" x:Name="cleanSignal2" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="2" x:Name="cleanSignal3" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="3" x:Name="cleanSignal4" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="4" x:Name="cleanSignal5" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="5" x:Name="cleanSignal6" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="6" x:Name="cleanSignal7" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="7" x:Name="cleanSignal8" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="8" x:Name="cleanSignal9" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="9" x:Name="cleanSignal10" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="10" x:Name="cleanSignal11" KeyUp="cleanSignalCalculation" />
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="11" x:Name="cleanSignal12" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="12" x:Name="cleanSignal13" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="13" x:Name="cleanSignal14" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="14" x:Name="cleanSignal15" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="15" x:Name="cleanSignal16" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="16" x:Name="cleanSignal17" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="17" x:Name="cleanSignal18" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="18" x:Name="cleanSignal19" KeyUp="cleanSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="1" Grid.Row="19" x:Name="cleanSignal20" KeyUp="cleanSignalCalculation"/>
+
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="0" x:Name="noiseSignal1" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="1" x:Name="noiseSignal2" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="2" x:Name="noiseSignal3" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="3" x:Name="noiseSignal4" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="4" x:Name="noiseSignal5" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="5" x:Name="noiseSignal6" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="6" x:Name="noiseSignal7" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="7" x:Name="noiseSignal8" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="8" x:Name="noiseSignal9" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="9" x:Name="noiseSignal10" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="10" x:Name="noiseSignal11" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="11" x:Name="noiseSignal12" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="12" x:Name="noiseSignal13" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="13" x:Name="noiseSignal14" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="14" x:Name="noiseSignal15" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="15" x:Name="noiseSignal16" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="16" x:Name="noiseSignal17" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="17" x:Name="noiseSignal18" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="18" x:Name="noiseSignal19" KeyUp="noiseSignalCalculation"/>
+                <TextBox PreviewTextInput="tb_PreviewTextInput" FontSize="20" Text="0" Margin="3,3,3,3" Grid.Column="2" Grid.Row="19" x:Name="noiseSignal20" KeyUp="noiseSignalCalculation"/>
+
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="0" Content="0" Name="ratio1"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="1" Content="0" Name="ratio2"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="2" Content="0" Name="ratio3"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="3" Content="0" Name="ratio4"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="4" Content="0" Name="ratio5"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="5" Content="0" Name="ratio6"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="6" Content="0" Name="ratio7"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="7" Content="0" Name="ratio8"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="8" Content="0" Name="ratio9"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="9" Content="0" Name="ratio10"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="10" Content="0" Name="ratio11"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="11" Content="0" Name="ratio12"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="12" Content="0" Name="ratio13"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="13" Content="0" Name="ratio14"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="14" Content="0" Name="ratio15"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="15" Content="0" Name="ratio16"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="16" Content="0" Name="ratio17"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="17" Content="0" Name="ratio18"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="18" Content="0" Name="ratio19"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="3" Grid.Row="19" Content="0" Name="ratio20"/>
+
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="0" Content="100"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="1" Content="420"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="2" Content="570"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="3" Content="710"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="4" Content="865"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="5" Content="1030"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="6" Content="1220"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="7" Content="1410"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="8" Content="1600"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="9" Content="1780"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="10" Content="1960"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="11" Content="2140"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="12" Content="2320"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="13" Content="2550"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="14" Content="2900"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="15" Content="3300"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="16" Content="3660"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="17" Content="4050"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="18" Content="5010"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="4" Grid.Row="19" Content="7250"/>
+
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="0" Content="420"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="1" Content="570"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="2" Content="710"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="3" Content="865"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="4" Content="1030"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="5" Content="1220"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="6" Content="1410"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="7" Content="1600"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="8" Content="1780"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="9" Content="1960"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="10" Content="2140"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="11" Content="2320"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="12" Content="2550"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="13" Content="2900"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="14" Content="3300"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="15" Content="3660"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="16" Content="4050"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="17" Content="5010"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="18" Content="7250"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="5" Grid.Row="19" Content="10000"/>
+
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="0" Content="19,9082932" Name="a1"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="1" Content="13,57820444" Name="a2"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="2" Content="12,08937785" Name="a3"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="3" Content="11,02071505" Name="a4"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="4" Content="10,14505453" Name="a5"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="5" Content="9,236417927" Name="a6"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="6" Content="8,428708778" Name="a7"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="7" Content="7,798327762" Name="a8"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="8" Content="7,301761832" Name="a9"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="9" Content="6,900657374" Name="a10"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="10" Content="6,560137978" Name="a11"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="11" Content="6,266817216" Name="a12"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="12" Content="5,979462466" Name="a13"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="13" Content="5,637920573" Name="a14"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="14" Content="5,274679402" Name="a15"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="15" Content="4,973393711" Name="a16"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="16" Content="4,727585205" Name="a17"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="17" Content="4,382895034" Name="a18"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="18" Content="3,834559868" Name="a19"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="6" Grid.Row="19" Content="3,311705621" Name="a20"/>
+
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="0" Content="0,05017" Name="k1"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="1" Content="0,04989" Name="k2"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="2" Content="0,04624" Name="k3"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="3" Content="0,05021" Name="k4"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="4" Content="0,05185" Name="k5"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="5" Content="0,05724" Name="k6"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="6" Content="0,05432" Name="k7"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="7" Content="0,05124" Name="k8"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="8" Content="0,04565" Name="k9"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="9" Content="0,04285" Name="k10"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="10" Content="0,04009" Name="k11"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="11" Content="0,03741" Name="k12"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="12" Content="0,04405" Name="k13"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="13" Content="0,05944" Name="k14"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="14" Content="0,05775" Name="k15"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="15" Content="0,04377" Name="k16"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="16" Content="0,0398" Name="k17"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="17" Content="0,07105" Name="k18"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="18" Content="0,07575" Name="k19"/>
+                <Label HorizontalAlignment="Center" FontSize="20"  Grid.Column="7" Grid.Row="19" Content="0,02397" Name="k20"/>
+
+            </Grid>
+        </Grid>
+    </Border>
+</Page>
